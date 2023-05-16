@@ -206,12 +206,16 @@ To allow multiple options to be selected, use the `multiple` attribute. It's a g
 
 ```html preview
 <sl-select label="Select a Few" value="option-1 option-2 option-3" multiple clearable>
-  <sl-option value="option-1">Option 1</sl-option>
-  <sl-option value="option-2">Option 2</sl-option>
-  <sl-option value="option-3">Option 3</sl-option>
-  <sl-option value="option-4">Option 4</sl-option>
-  <sl-option value="option-5">Option 5</sl-option>
-  <sl-option value="option-6">Option 6</sl-option>
+  <sl-option multiple value="option-1"
+    >wtf Option 1 with very long text about something impossible but very important</sl-option
+  >
+  <sl-option multiple value="option-2"
+    >Option 2 with very long text about something impossible but very important</sl-option
+  >
+  <sl-option multiple value="option-3">Option 3</sl-option>
+  <sl-option multiple value="option-4">Option 4</sl-option>
+  <sl-option multiple value="option-5">Option 5</sl-option>
+  <sl-option multiple value="option-6">Option 6</sl-option>
 </sl-select>
 ```
 

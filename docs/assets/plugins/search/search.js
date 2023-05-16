@@ -196,7 +196,7 @@
 
         switch (event.key) {
           case 'ArrowUp':
-            nextEl = items[Math.max(0, index - 1)];
+            o = items[Math.max(0, index - 1)];
             break;
           case 'ArrowDown':
             nextEl = items[Math.min(items.length - 1, index + 1)];

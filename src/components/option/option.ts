@@ -46,6 +46,7 @@ export default class SlOption extends ShoelaceElement {
    * multiple values.
    */
   @property({ reflect: true }) value = '';
+  @property({ type: Boolean }) showIcon: boolean = false;
 
   /** Draws the option in a disabled state, preventing selection. */
   @property({ type: Boolean, reflect: true }) disabled = false;
@@ -123,7 +124,7 @@ export default class SlOption extends ShoelaceElement {
         @mouseenter=${this.handleMouseEnter}
         @mouseleave=${this.handleMouseLeave}
       >
-        <sl-icon part="checked-icon" class="option__check" name="check" library="system" aria-hidden="true"></sl-icon>
+        ${this.showIcon ? html`<input type="checkbox" />` : ''}
         <slot part="prefix" name="prefix" class="option__prefix"></slot>
         <slot part="label" class="option__label" @slotchange=${this.handleDefaultSlotChange}></slot>
         <slot part="suffix" name="suffix" class="option__suffix"></slot>

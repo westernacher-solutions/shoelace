@@ -770,10 +770,13 @@ export default class SlSelect extends ShoelaceElement implements ShoelaceFormCon
                               "
                               ?pill=${this.pill}
                               size=${this.size}
+                              title="${option.getTextLabel()}"
                               removable
                               @sl-remove=${(event: SlRemoveEvent) => this.handleTagRemove(event, option)}
                             >
-                              ${option.getTextLabel()}
+                              <div part="select-tag-content" title="${option.getTextLabel()}">
+                                ${option.getTextLabel()}
+                              </div>
                             </sl-tag>
                           `;
                         } else if (index === this.maxOptionsVisible) {
