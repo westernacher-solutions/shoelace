@@ -538,7 +538,7 @@ export default class SlSelect extends ShoelaceElement implements ShoelaceFormCon
       }
     } else {
       this.value = this.selectedOptions[0]?.value ?? '';
-      this.displayLabel = this.selectedOptions[0]?.getTextLabel() ?? '';
+      this.displayLabel = (this.value && this.selectedOptions[0]?.getTextLabel()) ?? '';
     }
 
     // Update validity
